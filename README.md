@@ -2,14 +2,14 @@
 
 This project explores and compares three different unsupervised clustering algorithms applied to the MNIST dataset of handwritten digits. It investigates the impact of dimensionality reduction through Principal Component Analysis (PCA) on clustering performance and computational efficiency.
 
-## 🚀 Overview
+## Overview
 
 The goal of this study is to partition MNIST images into groups without using their labels during the training process. We compare:
 1.  **Gaussian Mixture Model (GMM)**: A probabilistic approach using a custom implementation of the Expectation-Maximization (EM) algorithm with diagonal covariance matrices.
 2.  **Normalized Cut (Spectral Clustering)**: A graph-based method that captures global structures by partitioning a similarity graph.
 3.  **Mean Shift**: A non-parametric, mode-seeking algorithm that identifies local density modes without requiring a predefined number of clusters.
 
-## 🛠️ Key Features
+## Key Features
 
 - **PCA Preprocessing**: Dimensionality reduction from 784 dimensions (28x28 pixels) down to as few as 2 components to analyze the trade-off between information loss and clustering reliability.
 - **Custom GMM Implementation**: A from-scratch implementation of the GMM EM algorithm optimized for stability and performance.
@@ -20,7 +20,7 @@ The goal of this study is to partition MNIST images into groups without using th
   - Reconstruction of cluster means from latent space back to the original image space (prototypical digits).
   - Comparison plots for accuracy and computational cost.
 
-## 📂 Project Structure
+## Project Structure
 
 - `main.py`: The primary entry point for running the experiments and collecting results.
 - `download_data.py`: Handles fetching the MNIST dataset from OpenML and managing local caching.
@@ -30,7 +30,7 @@ The goal of this study is to partition MNIST images into groups without using th
 - `clustering_results.csv`: Log file containing the raw data from experimental runs.
 - `figures/`: Directory containing generated plots and visualizations.
 
-## ⚙️ Installation & Usage
+## Installation & Usage
 
 1.  **Clone the repository**:
     ```bash
@@ -55,16 +55,16 @@ The goal of this study is to partition MNIST images into groups without using th
     python pca_visualization.py
     ```
 
-## 📊 Results Summary
+## Results Summary
 
 - **Normalized Cut** achieved the highest clustering accuracy (Rand Index ~0.93) but was the most computationally expensive.
 - **Gaussian Mixture Models** provided the best trade-off between speed and accuracy, proving to be robust across different PCA dimensions.
 - **Mean Shift** showed high sensitivity to kernel bandwidth and suffered from scalability issues in higher dimensions, though it effectively identified local density modes.
 
-## 👤 Author
+## Author
 
 - **Leonardo Sartori** - Università Ca' Foscari Venezia
 
-## 📄 License
+## License
 
 This project is for educational purposes as part of the "Foundations of Artificial Intelligence" course.
